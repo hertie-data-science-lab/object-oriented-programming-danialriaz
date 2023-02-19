@@ -2,19 +2,19 @@
 """
 Created on Sun Feb 12 18:04:03 2023
 
-@author: Danial
+@author: Danial & Fernandao
 """
-import numpy as np
 import random
 from Creatures import Bear
 from Creatures import Fish
 
 class River:
-    
+    # We introduce n indices and initially populate them all with None
     def __init__(self, n_room):
         self.n_room = n_room
         self.list = [None] * n_room
-       
+     
+    # We introduce the method of initialize where we input the number of indices and then randomly assign them to be either Fish, Bear or None
     def initialize(self):
         for i in range(self.n_room):
             random_number = random.randint(0, 2)
@@ -24,7 +24,8 @@ class River:
                 self.list[i] = Bear(i)
             elif (random_number == 2):
                 pass;               
-       
+     
+    # We introduce a method of display where we display which of; Fish, Bear, None occupies the indices
     def display(self):
         print("===================")
         print("Ecosystem status:\n")
@@ -34,7 +35,8 @@ class River:
             else: 
                 print(i.type)
         print("===================")
-        
+    
+    # We introduce a method 'next_time_step' where we input the number of iterations to be done
     def next_time_step(self, no_iter):
         for t in range(no_iter):
             # loop over each position in the river
