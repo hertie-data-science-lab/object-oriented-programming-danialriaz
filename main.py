@@ -2,7 +2,7 @@
 """
 Created on Sun Feb 12 18:05:41 2023
 
-@author: Hannah
+@author: Danial
 """
 
 from River import River

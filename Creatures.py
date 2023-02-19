@@ -2,7 +2,7 @@
 """
 Created on Sun Feb 12 18:02:49 2023
 
-@author: Hannah
+@author: Danial
 """
 
 from abc import ABCMeta, abstractmethod
